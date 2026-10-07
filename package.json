@@ -1,0 +1,34 @@
+{
+  "name": "eleven-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "netlify dev",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc --noEmit && vite build",
+    "cap:sync": "npm run build && cap sync android",
+    "android:setup": "node scripts/android-setup.mjs",
+    "android:init": "npm run build && cap add android && node scripts/android-setup.mjs && cap sync android",
+    "android:open": "cap open android",
+    "android:run": "npm run cap:sync && cap run android"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11",
+    "@capacitor/cli": "^7.0.0"
+  },
+  "description": "Eleven - assistente de voz web com Groq (Llama) como cérebro. PC e celular.",
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0",
+    "exifr": "^7.1.3",
+    "@capacitor/core": "^7.0.0",
+    "@capacitor/android": "^7.0.0",
+    "@capacitor/camera": "^7.0.0",
+    "@capacitor/filesystem": "^7.0.0",
+    "@capacitor/geolocation": "^7.0.0",
+    "@capacitor/local-notifications": "^7.0.0",
+    "@capacitor/share": "^7.0.0"
+  }
+}
