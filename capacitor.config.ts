@@ -10,7 +10,7 @@ import type { CapacitorConfig } from "@capacitor/cli";
 const serverUrl = process.env["CAP_SERVER_URL"];
 
 const config: CapacitorConfig = {
-  appId: "com.eleven.assistant", // troque se já tiver um applicationId; precisa ser igual ao do android/app/build.gradle
+  appId: "com.eleven.studios", // troque se já tiver um applicationId; precisa ser igual ao do android/app/build.gradle
   appName: "Eleven",
   webDir: "dist",
   server: {
